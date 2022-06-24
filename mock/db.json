@@ -1,0 +1,67 @@
+{
+  "camisas": [
+    {
+      "id": 1,
+      "photo": "https://www.guller.com.br/21115-medium_default/blusa-feminina-com-estampa-floral-ombro-de-fora-com-decote-v-b%C3%A1sica-com-estilo-ver%C3%A3o-el%C3%A1stica.jpg?1656088049870",
+      "size": ["P", "M", "G", "GG"],
+      "description": "Blusa Feminina Com Estampa Floral Ombro De Fora Com Decote V Básica Com Estilo Verão Elástica",
+      "brand": "Gucci",
+      "tissue": "Poliéster",
+      "price": "120"
+    },
+    {
+      "id": 2,
+      "photo": "https://images.lojanike.com.br/1024x1024/produto/camiseta-nike-dri-fit-academy-masculina-CW6101-371-1-11652820931.jpg",
+      "size": ["P", "M", "G"],
+      "description": "Eleve o nível do seu treino diário com a camiseta Nike Dri-FIT Academy. O tecido macio e elástico remove o suor da pele, enquanto os painéis de tela mantêm o frescor para que você se concentre em dar o seu melhor no jogo. Este produto é 100% feito com fibras de poliéster reciclado.",
+      "brand": "Nike",
+      "tissue": "100% Poliéster",
+      "price": "150"
+    },
+    {
+      "id": 3,
+      "photo": "https://static.netshoes.com.br/produtos/camiseta-maresia-silk-basica-zion/88/J19-0691-788/J19-0691-788_zoom1.jpg?ts=1641639292&ims=544x",
+      "size": ["M", "G", "GG"],
+      "description": "Camiseta Maresia Silk Básica Zion - Bordô",
+      "brand": "Maresia",
+      "tissue": "Algodão",
+      "price": "79.9"
+    },
+    {
+      "id": 4,
+      "photo": "https://images.lojanike.com.br/1024x1024/produto/camiseta-nike-hydroguard-essential-uv-masculina-DM3765-410-1-11630445117.jpg",
+      "size": ["P"],
+      "description": "Esse produto proporciona proteção solar UVA e UVB apenas nas áreas cobertas pela peça. Para proteger as áreas expostas, recomenda-se o uso de um protetor solar de boa qualidade.",
+      "brand": "Nike",
+      "tissue": "100% Poliéster",
+      "price": "189.99"
+    },
+    {
+      "id": 5,
+      "photo": "https://lojausereserva.vtexassets.com/arquivos/ids/6477001/0034631564_01.jpg?v=637693044196270000",
+      "size": ["P", "M", "G", "GG"],
+      "description": "Camiseta Tardezinha, na Reserva é assim, vamo? Vamo! Seja pra curtir a tardezinha, a batucada ou a conversa fiada. “Já mandaram te dizer que só tá faltando você”? Produção sob demanda.",
+      "brand": "Reserva",
+      "tissue": "100% Algodão",
+      "price": "116.1"
+    },
+    {
+      "id": 6,
+      "photo": "https://img.ltwebstatic.com/images3_pi/2021/10/18/16345441573f426e9172d9c25c48f67782a53e9a66.webp",
+      "size": ["P", "M"],
+      "description": "Galáxia ocasional Camiseta - Blusa leve e macia de se usar, com ombro caído, gola redonda, comprimento regular e com a estampa temática de galáxias.",
+      "brand": "Shein",
+      "tissue": "97% Poliéster, 3% Spandex",
+      "price": "52.99"
+    },
+    {
+      "id": 7,
+      "photo": "https://lojausereserva.vtexassets.com/arquivos/ids/5854698/0060722014_01.jpg?v=637648216960700000",
+      "size": ["P", "M", "G", "GG"],
+      "description": "Camiseta 100% algodão com estampa exclusiva da colabe Reserva + Mangueira. Esta peça é feita eticamente no Brasil e tem lucro revertido para a Estação Primeira. Comprando esta camiseta você ganha um pacote de 4 aulas ao vivo com os profissionais da Mangueira que estão parados devido à pandemia. Serão 4 encontros sobre os temas: adereços, customização, samba no pé e percussão. Você vai aprender a customizar sua própria peça, a tocar um instrumento e, claro, vai finalmente aprender a sambar!",
+      "brand": "Reserva",
+      "tissue": "100% Algodão",
+      "price": "79.9"
+    }
+  ]
+}
