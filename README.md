@@ -2,23 +2,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 
-# Marvel Api
+# Vanguarda Shop
 
 <span style="font-family: 'Poppins', sans-serif;font-size:9pt">
-Criação de um site utilizando a api da Marvel.
+Criação de um site utilizando uma Mock Api com o JSON Server.
 Utilização dos Conceitos:
 <br />
-• Axios 
+• Requisição HTTP com Axios (GET)
 <br />
 • Hooks
 <br /> 
 • Propriedades (Props) 
 <br />• Context API 
+<br />• Use Params
 <br />• Componentização 
+<br />• Responsividade para todas as telas 
 <br />• Statefull e Stateless 
 <br />• Navegação com React-Router-Dom 
 <br />• Ciclo de vida <br />
-• Autenticação com o Google (Firebase)<br />
 • PersistedState (Hook para permanência do Local Storage)
 </span>
 
@@ -29,7 +30,7 @@ Utilização dos Conceitos:
 
 <span style="font-family: 'Poppins', sans-serif;font-size:9pt">
 
-Você pode acompanhar o site pelo Link: https://marvel-api-d915a.web.app/home
+Você pode acompanhar o site pelo Link:
 
 </span>
 
@@ -77,11 +78,8 @@ Start the server
 </span>
 
 ```bash
-  npm run server
-```
-
-```bash
-  npm run start
+  npm run server -> Inicializa a Mock Api.
+  npm run start -> Inicializa o FrontEnd.
 ```
 
 <br />
@@ -91,9 +89,10 @@ Start the server
 
 <br />
 
-![Design Home Desktop]()
-
-![Design  Heroes Desktop]()
+![Design Login](public/DesignLoginPage.jpeg)
+![Design Home](public/DesignHomePage.jpeg)
+![Design Detalhes do Pedido](public/DesignDetailShirtPage.jpeg)
+![Design Pagamento](public/DesignPayment.jpeg)
 
 <br/>
 <br/>
