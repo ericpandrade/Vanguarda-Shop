@@ -1,46 +1,111 @@
-# Getting Started with Create React App
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Marvel Api
 
-## Available Scripts
+<span style="font-family: 'Poppins', sans-serif;font-size:9pt">
+Criação de um site utilizando a api da Marvel.
+Utilização dos Conceitos:
+<br />
+• Axios 
+<br />
+• Hooks
+<br /> 
+• Propriedades (Props) 
+<br />• Context API 
+<br />• Componentização 
+<br />• Statefull e Stateless 
+<br />• Navegação com React-Router-Dom 
+<br />• Ciclo de vida <br />
+• Autenticação com o Google (Firebase)<br />
+• PersistedState (Hook para permanência do Local Storage)
+</span>
 
-In the project directory, you can run:
+<br/>
+<br/>
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<span style="font-family: 'Poppins', sans-serif;font-size:9pt">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Você pode acompanhar o site pelo Link: https://marvel-api-d915a.web.app/home
 
-### `npm test`
+</span>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br/>
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<span style="font-family: 'Poppins', sans-serif;font-size:9pt">
+Install my-project with npm
+</span>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  npm install my-project
+  cd my-project
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Run Locally
 
-### `npm run eject`
+<span style="font-family: 'Poppins', sans-serif;font-size:9pt">
+Clone the project
+</span>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+  git clone https://link-to-project
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<span style="font-family: 'Poppins', sans-serif;font-size:9pt">
+Go to the project directory
+</span>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+  cd my-project
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<span style="font-family: 'Poppins', sans-serif;font-size:9pt">
+Install dependencies
+</span>
 
-## Learn More
+```bash
+  npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<span style="font-family: 'Poppins', sans-serif;font-size:9pt">
+Start the server
+</span>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  npm run server
+```
+
+```bash
+  npm run start
+```
+
+<br />
+<br />
+
+<img src="https://camo.githubusercontent.com/3fa18cce0455bff030d54f283e560749b45f7bf4f2751857db81ff1bc3cb2bce/68747470733a2f2f696d672e69636f6e73382e636f6d2f6475736b2f36342f3030303030302f6b726974612e706e67"/> <span style="font-family: 'Poppins', sans-serif;font-size:20pt"> Designs<span>
+
+<br />
+
+![Design Home Desktop]()
+
+![Design  Heroes Desktop]()
+
+<br/>
+<br/>
+
+## Contact
+
+<div> 
+  <a href = "mailto:ericpandrade085@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=red" target="_blank"></a>
+  <a href="https://www.linkedin.com/in/eric-andrade-872a01210/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+  <a href="https://api.whatsapp.com/send?phone=+5585989828188&text=Olá! Gostaria de entrar em contato." target="_blank"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" target="_blank"></a>
+</div>
+
+<span style="font-family: 'Poppins', sans-serif;font-size:9pt; font-style:italic">
+Projeto feito por Eric Pereira Andrade.
+</span>
