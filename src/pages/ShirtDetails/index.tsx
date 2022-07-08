@@ -7,13 +7,15 @@ import Header from "../../components/Header";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
-import { Card, Form, Input, message, Modal, Select, Spin } from "antd";
+import { Card, Form, message, Modal, Spin } from "antd";
 import { useForm } from "antd/lib/form/Form";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import ControlOrder from "../../components/ControlOrder";
+import ModalFooter from "../../components/ModalFooter";
+import Footer from "../../components/Footer";
 interface IParamsProps {
   id?: string;
 }
-
 interface IShirtDetail {
   price: number;
   brand: string;
@@ -36,8 +38,6 @@ const ShirtDetails = () => {
   );
 
   const [toggleModalState, setToggleModalState] = useState(false);
-
-  const { Option } = Select;
 
   const navigate = useNavigate();
 
@@ -79,82 +79,6 @@ const ShirtDetails = () => {
   const togglePaymentModal = () => {
     setToggleModalState(!toggleModalState);
   };
-
-  const verifyFields = {
-    verifyIfFieldsAreEmpty: () => {
-      const orderSize = order.getFieldValue("size");
-      const orderAmount = order.getFieldValue("amount");
-
-      const isVerified = !orderSize || !orderAmount ? true : false;
-
-      return isVerified;
-    },
-    checkIfOrderIsInTheLimit: () => {
-      const orderAmount = order.getFieldValue("amount");
-
-      const isVerified = orderAmount >= 250 ? true : false;
-
-      return isVerified;
-    },
-    checkIfOrderAmountISValid: () => {
-      const orderAmount = order.getFieldValue("amount");
-
-      const isVerified = orderAmount <= 0 ? true : false;
-
-      return isVerified;
-    },
-  };
-
-  const openPaymentModal = () => {
-    if (verifyFields.verifyIfFieldsAreEmpty()) {
-      toast.error("Por favor, preencha todos os campos.", {
-        theme: "light",
-        autoClose: 2000,
-      });
-    } else if (verifyFields.checkIfOrderAmountISValid()) {
-      toast.error("Por favor, digite uma quantidade válida! (Acima de 0).", {
-        theme: "light",
-        autoClose: 2000,
-      });
-    } else if (verifyFields.checkIfOrderIsInTheLimit()) {
-      toast.error(
-        "A quantidade limite de pedidos é de 250. Por favor, diminua a quantidade solicitada!",
-        {
-          theme: "light",
-          autoClose: 2000,
-        }
-      );
-    } else {
-      togglePaymentModal();
-    }
-  };
-
-  const finalizePayment = () => {
-    message.success(
-      <div className={styles.messageSucces}>
-        <span className={styles.messageCongratulations}>
-          Parabéns, pedido finalizado com sucesso!
-        </span>
-        <div className={styles.orderSummaryContainer}>
-          <strong className={styles.orderSummary}>Resumo do Pedido</strong>
-          <span>Nome do pedido: {handleShirtInformation.name}</span>
-          <span>
-            Preço total: 
-            {handleShirtInformation.price !== undefined &&
-              (
-                handleShirtInformation.price * order.getFieldValue("amount")
-              ).toLocaleString("pt-br", {
-                style: "currency",
-                currency: "BRL",
-              })}
-          </span>
-        </div>
-      </div>,
-      5
-    );
-
-    goToHomePage()
-  }
 
   return (
     <Spin spinning={loading}>
@@ -205,58 +129,17 @@ const ShirtDetails = () => {
                       currency: "BRL",
                     })}
                 </span>
-                <div className={styles.sizeAndAmountContainer}>
-                  <div className={styles.sizeContainer}>
-                    <Form.Item
-                      name="size"
-                      label="Tamanhos"
-                      style={{ font: "600 1rem Poppins, sans-serif" }}
-                      required
-                    >
-                      <Select className={styles.select} placeholder="Selecione">
-                        {handleShirtInformation.size !== undefined
-                          ? handleShirtInformation.size.map(
-                              (shirtSizeMapped) => {
-                                return (
-                                  <Option
-                                    key={shirtSizeMapped}
-                                    value={shirtSizeMapped}
-                                  >
-                                    {shirtSizeMapped}
-                                  </Option>
-                                );
-                              }
-                            )
-                          : ""}
-                      </Select>
-                    </Form.Item>
-                  </div>
-                  <div>
-                    <Form.Item
-                      name="amount"
-                      label="Quantidade"
-                      style={{ font: "600 1rem Poppins, sans-serif" }}
-                      required
-                    >
-                      <Input
-                        placeholder="Quantidade desejada"
-                        type="number"
-                        min={0}
-                        style={{ maxWidth: "200px" }}
-                      />
-                    </Form.Item>
-                  </div>
-                </div>
-                <button
-                  onClick={openPaymentModal}
-                  className={styles.paymentButton}
-                >
-                  Pagamento
-                </button>
               </div>
+              <ControlOrder
+                controlForm={order}
+                modalState={toggleModalState}
+                setModalState={setToggleModalState}
+                shirtInformation={handleShirtInformation}
+              />
             </div>
           </section>
         </main>
+
         <Modal
           width={1000}
           style={{ minWidth: "300px" }}
@@ -264,15 +147,12 @@ const ShirtDetails = () => {
           visible={toggleModalState}
           title={`Pagamento da blusa ${handleShirtInformation.name}`}
           footer={[
-            <div className={styles.footerModalContainer}>
-              <button
-                onClick={togglePaymentModal}
-                className={styles.cancelButton}
-              >
-                Cancelar
-              </button>
-              <button onClick={finalizePayment} className={styles.finalizeOrder}>Finalizar Pedido</button>
-            </div>,
+            <ModalFooter
+              shirtInformation={handleShirtInformation}
+              dataForm={order}
+              modalState={toggleModalState}
+              setModalState={setToggleModalState}
+            />,
           ]}
         >
           <Card title="Resumo do Pedido">
@@ -310,6 +190,9 @@ const ShirtDetails = () => {
           </Card>
         </Modal>
       </Form>
+
+                <Footer />
+
       <ToastContainer
         position="top-right"
         autoClose={2000}
@@ -321,6 +204,7 @@ const ShirtDetails = () => {
         draggable
         pauseOnHover
       />
+
     </Spin>
   );
 };

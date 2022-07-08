@@ -1,0 +1,53 @@
+.footerModalContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+
+  button {
+    width: 150px;
+    height: 45px;
+    border: 0;
+    appearance: none;
+    border-radius: 0.35rem;
+    font: 500 1rem Poppins, sans-serif;
+
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  .cancelButton {
+    background: #ff002f;
+    color: white;
+  }
+
+  .finalizeOrder {
+    background: #3fad27;
+    color: white;
+  }
+}
+
+.messageSucces {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font: 500 0.9rem Poppins, sans-serif;
+
+  .orderSummaryContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.5rem;
+  }
+
+  .orderSummary {
+    font: 500 0.9rem Poppins, sans-serif;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 0.1rem;
+  }
+}
