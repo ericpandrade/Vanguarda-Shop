@@ -2,7 +2,7 @@ import styles from './style.module.scss'
 
 import { useAuthContext } from "../../context/authContext"
 
-import logoVanguarda from '../../assets/logo.png'
+import logo from '../../assets/logo.png'
 import { useNavigate } from 'react-router-dom'
 import { message } from 'antd'
 
@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <section className={styles.sectionHeader}>
-      <img src={logoVanguarda} alt="Logo da Vanguarda Tech" />
+      <img src={logo} alt="Logo da Vanguarda Tech" />
       <div className={styles.containerInformations}>
         <h1>Bem vindo, {handleDataUsername}!</h1>
         <button onClick={logout}>SAIR</button>

@@ -7,18 +7,21 @@
 <span style="font-family: 'Poppins', sans-serif;font-size:9pt">
 Criação de um site utilizando uma Mock Api com o JSON Server.
 Utilização dos Conceitos:
+
 <br />
+
 • Requisição HTTP com Axios (GET)
 <br />
+
 • Hooks
-<br /> 
-• Propriedades (Props) 
-<br />• Context API 
+<br />
+• Propriedades (Props)
+<br />• Context API
 <br />• Use Params
-<br />• Componentização 
-<br />• Responsividade para todas as telas 
-<br />• Statefull e Stateless 
-<br />• Navegação com React-Router-Dom 
+<br />• Componentização
+<br />• Responsividade para todas as telas
+<br />• Statefull e Stateless
+<br />• Navegação com React-Router-Dom
 <br />• Ciclo de vida <br />
 • PersistedState (Hook para permanência do Local Storage)
 </span>
